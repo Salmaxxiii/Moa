@@ -1,0 +1,206 @@
+﻿<html>
+<head>
+    <meta name="referrer" content="no-referrer">
+    <title>Moa</title>
+
+    <script type="text/javascript">
+
+        // redirect to mobile version
+
+        /**
+         * definitely not the best way to findout if there is a mobile browser
+         * @returns {any}
+         */
+        function deviceOS() {
+            var useragent = navigator.userAgent;
+            if (useragent.match(/Android/i)) {
+                return 'android';
+            } else if (useragent.match(/webOS/i)) {
+                return 'webos';
+            } else if (useragent.match(/iPhone/i)) {
+                return 'iphone';
+            } else if (useragent.match(/iPod/i)) {
+                return 'ipod';
+            } else if (useragent.match(/iPad/i)) {
+                return 'ipad';
+            } else if (useragent.match(/Windows Phone/i)) {
+                return 'windows phone';
+            } else if (useragent.match(/SymbianOS/i)) {
+                return 'symbian';
+            } else if (useragent.match(/RIM/i) || useragent.match(/BB/i)) {
+                return 'blackberry';
+            } else {
+                return false;
+            }
+        }
+
+        if (deviceOS()) {
+            var frameEl = document.getElementById('frame');
+            location.href = "https://console.dialogflow.com/api-client/demo/embedded/081d77a5-d555-4842-9cbe-0bfa128bf76a";
+        }
+    </script>
+
+    <meta property="og:title" content="Moa">
+    <meta property="og:description" content="Mental Health &amp; Self-Care">
+    <meta property="og:locale" content="en">
+    <meta property="og:image" content="9bca5c37-0d59-4d29-bf74-64dd9561407b_x.png">
+    <link rel="icon" type="image/png" href="https://storage.googleapis.com/cloudprod-apiai/9bca5c37-0d59-4d29-bf74-64dd9561407b_xs.png">
+
+    <script defer="" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script defer="" src="https://cdn.jsdelivr.net/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+<body class="website white">
+
+    <div id="preloader">
+        <div class="logo"></div>
+    </div>
+
+    <div id="wrapper">
+        <header id="header">
+            <nav class="navbar navbar-inverse" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                        <a class="navbar-brand" href="http://localhost:5000/"></a>
+
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div id="main" class="container">
+
+
+            <div class="row">
+
+                <div class="col-md-6">
+                    <h1>Moa</h1>
+                    <h2> <font size="4">Mental Health &amp; Self-Care </font></h2>
+                    <div class="b_integrations_agent_links">
+                        <a href="#" data-toggle="modal" data-target="#embedModal"><i class="fa-code fa"></i>Embed</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <style>
+                        .b_frame {
+                            margin-top: 10px;
+                            box-shadow: 0px 19px 147px -41px rgb(128, 128, 128);
+                            border: none;
+                        }
+                    </style>
+                    <iframe id="frame"
+                            class="b_frame"
+                            allow="microphone;"
+                            width="400"
+                            height="550"
+                            src="https://console.dialogflow.com/api-client/demo/embedded/081d77a5-d555-4842-9cbe-0bfa128bf76a"></iframe>
+                </div>
+            </div>
+
+            <div class="modal fade" tabindex="-1" id="embedModal" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                            <h4 class="modal-title">Use following code to integrate this agent into your site:</h4>
+                        </div>
+                        <div class="modal-body">
+                            <pre>&lt;iframe width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/081d77a5-d555-4842-9cbe-0bfa128bf76a"&gt;&lt;/iframe&gt;</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" tabindex="-1" id="shareModal" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                            <h4 class="modal-title">Share this agent via social networks:</h4>
+                        </div>
+                        <div class="modal-body">
+
+                            <a href="https://www.facebook.com/sharer.php?u=https://bot.dialogflow.com/081d77a5-d555-4842-9cbe-0bfa128bf76a" target="_blank">
+                                <img src="https://assets.dialogflow.com/common/assets/img/social_share/facebook.png" alt="Facebook">
+                            </a>
+
+                            <!-- Twitter -->
+                            <a href="https://twitter.com/share?text=Moa%20https://bot.dialogflow.com/081d77a5-d555-4842-9cbe-0bfa128bf76a%20at%20@dialogflow.com&amp;url=false" target="_blank">
+                                <img src="https://assets.dialogflow.com/common/assets/img/social_share/twitter.png" alt="Twitter">
+                            </a>
+
+                            <!-- Google+ -->
+                            <a href="https://plus.google.com/share?url=https://bot.dialogflow.com/081d77a5-d555-4842-9cbe-0bfa128bf76a" target="_blank">
+                                <img src="https://assets.dialogflow.com/common/assets/img/social_share/google.png" alt="Google">
+                            </a>
+
+                            <!-- LinkedIn -->
+                            <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://bot.dialogflow.com/081d77a5-d555-4842-9cbe-0bfa128bf76a" target="_blank">
+                                <img src="https://assets.dialogflow.com/common/assets/img/social_share/linkedin.png" alt="LinkedIn">
+                            </a>
+
+                            <!-- Reddit -->
+                            <a href="https://reddit.com/submit?url=https://bot.dialogflow.com/081d77a5-d555-4842-9cbe-0bfa128bf76a&amp;title=Moa.%20Mental+Health+%26+Self-Care" target="_blank">
+                                <img src="https://assets.dialogflow.com/common/assets/img/social_share/reddit.png" alt="Reddit">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // non-blocking CSS delivery
+        var loadDeferredStyles = function () {
+            var addStylesNode = document.getElementById("deferred-styles");
+            var replacement = document.createElement("div");
+            replacement.innerHTML = addStylesNode.textContent;
+            document.body.appendChild(replacement);
+            addStylesNode.parentElement.removeChild(addStylesNode);
+        };
+        var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+            window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+        if (raf) {
+            raf(function () { window.setTimeout(loadDeferredStyles, 0); });
+        } else {
+            window.addEventListener('load', loadDeferredStyles);
+        }
+    </script>
+
+    <!-- Google Analytics -->
+    <script>
+        window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
+        ga('create', 'UA-50971730-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script async="" src="https://www.google-analytics.com/analytics.js"></script>
+
+
+
+    <div>
+        <link href="https://cdn.jsdelivr.net/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,300&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+        <link href="https://cdn.jsdelivr.net/fontawesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="https://assets.dialogflow.com/common/website-poly.min.css" rel="stylesheet" type="text/css">
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/7.14.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>
+
+</body>
+</html>
