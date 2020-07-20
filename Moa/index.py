@@ -5,7 +5,10 @@ import os
 import dialogflow
 import requests
 import json
-import pusher
+
+import argparse
+import uuid
+
 
 app = Flask(__name__)
 
@@ -14,42 +17,38 @@ def index():
     return render_template('index.html')
 
 # run Flask app
-if __name__ == "__main__":
+if __name__ == "__main__": 
     app.run()
 
-@app.route('/webhook', methods=['POST'])
-def webhook():
-    req = request.get_json(silent=True, force=True)
-    # commented out by Naresh
-    res = processRequest(req)
-    res = json.dumps(res, indent=4)
-    r = make_response(res)
-    r.headers['Content-Type'] = 'application/json'
-    return r
 
-def processRequest(req):
-    if req.get("queryResult").get("action") != "Happy":
-        print("Please check your action name in DialogFlow...")
-        return {}
-    result = req.get("queryResult")
-    parameters = result.get("parameters")
-    baseurl = 'https://www.google.com/search?q=google&rlz=1C1CHBF_enTN886TN886&oq=google&aqs=chrome..69i57j69i59j69i60l3j69i65l2j69i60.1048j0j7&sourceid=chrome&ie=UTF-8';
-    if baseurl is None:
-        return {}
-    result = urlopen(baseurl).read()
-    data = json.loads(result)
-    # for some the line above gives an error and hence decoding to utf-8 might help
-    # data = json.loads(result.decode('utf-8'))
-    res = makeWebhookResult(data)
-    return res
 
-def makeWebhookResult(data,currency2):
-    query = data.get('Happy')
-    if query is None:
-        return {}
-    
-    speech = "GREAT NEWS !  "
-    # Naresh
-    return {
-        "fulfillmentText": speech,
-    }
+
+#import firebase_admin
+#from firebase_admin import credentials
+#from firebase_admin import firestore
+
+#use the app default credentials
+#cred = credentials.ApplicationDefault()
+#firebase_admin.initialize_app(cred, {
+#    'projectId': project_id,})
+#db = firestore.client()
+
+#use a service account
+#cred = credentials.Certificate(r'C:\Users\dlgas\source\repos\Moa\Moa\moa-niwamd-23db315d91eb.json')
+#firebase_admin.initialize_app(cred)
+#db = firestore.client()
+
+#create collection
+#doc_ref = db.collection(u'users').document(u'alovelace')
+#doc_ref.set({
+#    u'first': u'Ada',
+#    u'last': 'Lovelace',
+#    u'born': 1815})
+
+#read data
+#users_ref = db.collection(u'users')
+#docs = users_ref.stream()
+#for doc in docs:
+#    print(u'{} => {}'.format(doc.id, doc.to_dict()))
+
+
