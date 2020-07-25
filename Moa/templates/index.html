@@ -49,6 +49,7 @@
     <script defer="" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script defer="" src="https://cdn.jsdelivr.net/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+
 </head>
 
 <body class="website white">
@@ -85,9 +86,6 @@
                 <div class="col-md-6">
                     <h1>Moa</h1>
                     <h2> <font size="4">Mental Health &amp; Self-Care </font></h2>
-                    <div class="b_integrations_agent_links">
-                        <a href="#" data-toggle="modal" data-target="#embedModal"><i class="fa-code fa"></i>Embed</a>
-                    </div>
                 </div>
                 <div class="col-md-6">
                     <style>
@@ -97,13 +95,7 @@
                             border: none;
                         }
                     </style>
-                    <iframe id="frame"
-                            class="b_frame"
-                            allow="microphone;"
-                            width="400"
-                            height="550"
-                            src="https://console.dialogflow.com/api-client/demo/embedded/081d77a5-d555-4842-9cbe-0bfa128bf76a">
-                    </iframe>
+                    <iframe></iframe>
                 </div>
             </div>
 
@@ -195,13 +187,11 @@
         <link href="https://assets.dialogflow.com/common/website-poly.min.css" rel="stylesheet" type="text/css">
     </div>
 
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="/__/firebase/7.14.2/firebase-app.js"></script>
-
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-         https://firebase.google.com/docs/web/setup#available-libraries -->
-    <!-- Initialize Firebase -->
-    <script src="/__/firebase/init.js"></script>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger chat-icon="https://storage.googleapis.com/cloudprod-apiai/a52468b2-e1af-40ab-b406-3bc2ac88d6f0_x.png"
+                  chat-title="Moa"
+                  agent-id="081d77a5-d555-4842-9cbe-0bfa128bf76a"
+                  language-code="en"></df-messenger>
 
 </body>
 </html>
